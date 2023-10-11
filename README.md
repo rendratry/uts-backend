@@ -21,4 +21,4 @@ Jika Berhasil Maka Akan Dibuatkan Tabel Secara Otomatis di Dalam Database.
 3. Pastikan saat menambahkan maka todo yang ditambahkan muncul didalam tabel
 
 ## Hasil
-![Hasil Jadi](https://github.com/rendratry/kuis-1/blob/main/todolist-2.png)
+![Hasil Jadi](https://github.com/rendratry/kuis-2/blob/main/todolist-2.png)
