@@ -28,4 +28,4 @@ Aturan :
 Todo/ Acara yang statusnya `BELUM SELESAI` akan tampil di tabel atas/ Todo, jika Acara diubah statusnya menjadi `SELESAI` maka akan berpindah ke tabel bawah di tabel Complete begitu pula sebaliknya jika di `RESTORE` maka akan kembali ke tabel atas.
 
 ## Hasil
-![Hasil Jadi](https://github.com/rendratry/kuis-2/blob/main/todolist-2.png)
+![Hasil Jadi](https://github.com/rendratry/uts-backend/blob/main/todolist-uts-be.png)
