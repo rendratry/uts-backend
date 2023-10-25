@@ -28,4 +28,6 @@ class TodosController extends BaseController {
     public function doneTodo($id){
         //Ubah kolom `status` di database
     }
+
+    //Buat Fungsi sesuai dengan perintah
 }

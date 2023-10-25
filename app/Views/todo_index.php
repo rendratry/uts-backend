@@ -22,12 +22,13 @@
     <button type="button" class="btn btn-primary">Tambahkan</button>
     </form>
     <br></br>
+    <h2>Todo</h2>
     <div class="mb-3">
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>No</th>
-                <th>Todo</th>
+                <th>Acara</th>
                 <th>Deadline</th>
                 <th>Status</th>
                 <th>Action</th>
@@ -45,17 +46,75 @@
                 <button class="btn btn-primary">
                     Selesaikan
                 </button>
+                <button class="btn btn-secondary">
+                    Edit
+                </button>
+                <button class="btn btn-danger">
+                    Hapus
+                </button>
             </tr>
             <tr>
+                <td>2</td>
+                <td>Belajar Membuat Project Codeigniter 4</td>
+                <td>14/10/2023</td>
+                <td>
+                <span class="badge rounded-pill bg-danger">Belum Selesai</span>
+                </td>
+                <td>
+                <button class="btn btn-primary">
+                    Selesaikan
+                </button>
+                <button class="btn btn-secondary">
+                    Edit
+                </button>
+                <button class="btn btn-danger">
+                    Hapus
+                </button>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <h2>Complete</h2>
+    <div class="mb-3">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Acara</th>
+                <th>Deadline</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
                 <td>1</td>
+                <td>Belajar Membuat Controller Codeigniter 4</td>
+                <td>14/10/2023</td>
+                <td>
+                <span class="badge rounded-pill bg-success">Selesai</span>
+                </td>
+                <td>
+                <button class="btn btn-outline-danger">
+                   Hapus
+                </button>
+                <button class="btn btn-outline-primary">
+                   Restore
+                </button>
+            </tr>
+            <tr>
+                <td>2</td>
                 <td>Belajar Membuat Project Codeigniter 4</td>
                 <td>14/10/2023</td>
                 <td>
                 <span class="badge rounded-pill bg-success">Selesai</span>
                 </td>
                 <td>
-                <button class="btn btn-primary">
-                    Selesaikan
+                <button class="btn btn-outline-danger">
+                   Hapus
+                </button>
+                <button class="btn btn-outline-primary">
+                   Restore
                 </button>
             </tr>
         </tbody>
