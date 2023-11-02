@@ -10,16 +10,16 @@
 <body>
     <div class="container">
     <h1>Todo List</h1>
-    <form action="">
+    <form method="POST" action="<?= base_url('create-todo')?>">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Tambahkan Acara</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Isikan Acara">
+        <input required name="todo" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Isikan Acara">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Deadline</label>
-        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Isikan Acara">
+        <input required name="deadline" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Isikan Acara">
     </div>
-    <button type="button" class="btn btn-primary">Tambahkan</button>
+    <button type="submit" class="btn btn-primary">Tambahkan</button>
     </form>
     <br></br>
     <h2>Todo</h2>
@@ -35,42 +35,27 @@
             </tr>
         </thead>
         <tbody>
+        <?php $no = 1;?>
+        <?php foreach ($progress as $p): ?>
         <tr>
-                <td>1</td>
-                <td>Belajar Membuat Controller Codeigniter 4</td>
-                <td>14/10/2023</td>
+                <td><?= $no++ ?></td>
+                <td><?=$p->todo?></td>
+                <td><?=$p->deadline?></td>
                 <td>
                 <span class="badge rounded-pill bg-danger">Belum Selesai</span>
                 </td>
                 <td>
-                <button class="btn btn-primary">
+                <a class="btn btn-primary" href="<?= base_url('done-todo/' . $p->id)?>">
                     Selesaikan
-                </button>
-                <button class="btn btn-secondary">
+                </a>
+                <a class="btn btn-secondary" href="<?= base_url('edit-todo/' . $p->id)?>">
                     Edit
-                </button>
-                <button class="btn btn-danger">
+                </a>
+                <a class="btn btn-danger" href="<?= base_url('delete-todo/' . $p->id)?>">
                     Hapus
-                </button>
+                </a>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Belajar Membuat Project Codeigniter 4</td>
-                <td>14/10/2023</td>
-                <td>
-                <span class="badge rounded-pill bg-danger">Belum Selesai</span>
-                </td>
-                <td>
-                <button class="btn btn-primary">
-                    Selesaikan
-                </button>
-                <button class="btn btn-secondary">
-                    Edit
-                </button>
-                <button class="btn btn-danger">
-                    Hapus
-                </button>
-            </tr>
+            <?php endforeach ?>
         </tbody>
     </table>
     </div>
@@ -87,36 +72,24 @@
             </tr>
         </thead>
         <tbody>
+        <?php $no = 1;?>
+        <?php foreach ($done as $d): ?>
         <tr>
-                <td>1</td>
-                <td>Belajar Membuat Controller Codeigniter 4</td>
-                <td>14/10/2023</td>
+                <td><?= $no++ ?></td>
+                <td><?= $d->todo?></td>
+                <td><?= $d->deadline?></td>
                 <td>
                 <span class="badge rounded-pill bg-success">Selesai</span>
                 </td>
                 <td>
-                <button class="btn btn-outline-danger">
-                   Hapus
-                </button>
-                <button class="btn btn-outline-primary">
+                <a class="btn btn-outline-danger" href="<?= base_url('delete-todo/' . $d->id)?>">
+                    Hapus
+                </a>
+                <a class="btn btn-outline-primary" href="<?= base_url('restore-todo/' . $d->id)?>">
                    Restore
-                </button>
+                </a>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Belajar Membuat Project Codeigniter 4</td>
-                <td>14/10/2023</td>
-                <td>
-                <span class="badge rounded-pill bg-success">Selesai</span>
-                </td>
-                <td>
-                <button class="btn btn-outline-danger">
-                   Hapus
-                </button>
-                <button class="btn btn-outline-primary">
-                   Restore
-                </button>
-            </tr>
+        <?php endforeach ?>
         </tbody>
     </table>
     </div>
